@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin:0;
     padding:0;
@@ -212,3 +213,14 @@ body {
     color: #fff;
 }
 
+=======
+:root {
+    --primary-color: rgb(5, 5, 31);
+    --secondary-color: rgb(188, 186, 186); 
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+>>>>>>> 88edde3284bf2450d0b1d573c4d0c2cead7e71e2
