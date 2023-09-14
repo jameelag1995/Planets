@@ -1,0 +1,12 @@
+.Rplanetmercury-container {
+    display: flex;
+    
+}
+
+@media (max-width:500px) {
+    .Rplanet-mercury {
+    display: flex;
+    height: 400px;
+    width: 400px;
+}
+}
