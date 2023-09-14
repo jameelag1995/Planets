@@ -1,19 +1,12 @@
 .Rplanetvenus-container {
-    position: relative;
-    width: fit-content;
-    margin: 0 auto;
-}
-.venus {
-    width: 500px;
-    height: 450px;
     display: flex;
-    margin: 90px auto;
-    transform: rotate(48deg);
-    animation: curclick .8s linear(0 0%, 1 100%) infinite
-    background-color: black;
-}
-
-@media  (max-width: 500px;) {
-
-}
     
+}
+
+@media (max-width:500px) {
+    .Rplanet-mercury {
+    display: flex;
+    height: 400px;
+    width: 400px;
+}
+}
