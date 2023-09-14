@@ -1,0 +1,136 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+   
+}
+
+.eheading{
+    text-align: center;
+    margin-top: 50px;
+}
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.pie-wrap {
+    border: 2px solid lightgrey;
+    width: 400px;
+    height: 400px;
+    margin: 10% 50px;
+    position: relative;
+    border-radius: 50%;
+    color: black;
+    overflow: hidden;
+}
+
+.pie-wrap .entry{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*  individual/seperate entries* */
+.diameter{
+    background-color: aqua;
+    height: 50%;
+    width: 50%;
+    display: block;
+}
+
+.mass{
+    background-color: cornflowerblue;
+    height: 50%;
+    width: 50%;
+}
+
+
+.density{
+    background-color: rgb(98, 115, 202);
+    height:50%;
+    position: absolute;
+    top: 0px;
+    right: 0;
+    width: 50%;
+    clip-path: polygon(0 0, 100% 0%, 0% 100%);
+}
+
+.gravity{
+    background-color: rgb(3, 255, 221);
+    height:50%;
+    width: 50%;
+    right: 0;
+    top: 0;
+    position: absolute;
+    clip-path:polygon(0% 100%, 100% 0%, 100% 100%);
+}
+
+.escape{
+    background-color: rgb(61, 135, 125);
+    height:50%;
+    width: 50%;
+    right: 0;
+    top: 50%;
+    position: absolute;
+    clip-path:polygon(0% 0%, 100% 0%, 100% 100%);
+}
+
+.rotation{
+    background-color: rgb(1, 7, 129);
+    height:50%;
+    width: 50%;
+    right: 0;
+    top: 50%;
+    position: absolute;
+    clip-path:polygon(0% 0%, 100% 100%, 0% 100%);
+}
+/* wrap */
+.pie-wrap .gravity p{
+    position: absolute;
+    top: 140px;
+    color: white;
+}
+.pie-wrap .gravity p:first-child{
+    top: 120px;
+}
+
+.pie-wrap .escape p{
+    position: absolute;
+    top: 20px;
+}
+
+.pie-wrap .escape p:first-child{
+    top: 0px;
+}
+
+.pie-wrap .density p, .pie-wrap .rotation p{
+    position: absolute;
+    left: 20px;
+    top: 80px;
+}
+
+.pie-wrap .pink, .pie-wrap .wheat{
+    justify-content: flex-start;
+}
+
+.pie-wrap .density p:first-child, .pie-wrap .rotation p:first-child{
+    top: 100px;
+}
+
+/* transition */
+.entry .entry-value{
+    display: none;
+    transition: all 500ms linear;
+}
+.entry:hover .entry-value{
+    display: block;
+}
+.entry{
+    transition: all 500ms linear ;
+}
+.entry:hover{
+    filter: invert();
+}
