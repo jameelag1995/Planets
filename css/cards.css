@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.j-cards {
+  display: grid;
+  grid-template-areas: "mercury" "venus" "earth" "mars" "jupiter" "saturn" "uranus"
+    "neptune";
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+margin: auto;
+  max-width: 500px;
+  height: 100%;
+  background: #333;
+  padding: 10px 0;
+}
+@media (min-width :501px) {
+    .j-cards {
+        min-width: 100vw;
+        grid-template-areas:
+         "mercury venus" 
+         "earth mars"
+          "jupiter saturn"
+           "uranus neptune";
+    }
+
+    
+}
+.mercury {
+    grid-area:mercury ;
+}
+.venus{
+    grid-area: venus;
+}
+.earth{
+    grid-area: earth;
+}
+.mars{
+    grid-area: mars;
+}
+.jupiter{
+    grid-area: jupiter;
+}
+.saturn{
+    grid-area: saturn;
+}
+.uranus{
+    grid-area: uranus;
+}
+.neptune{
+    grid-area: neptune;
+}
+.card {
+  border: 1px solid white;
+  border-radius: 10px;
+  width: 450px;
+  height: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  
+
+  
+}
+.name {
+    
+    height: 100px;
+    text-align: center;
+    width: 100%;
+    padding: 10px 8px;
+    background: #000000;
+    border-radius: 10px 10px 0 0;
+
+}
+.mercury .pic{
+    
+    
+    background: url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBajF5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f83e2101be00f832081169073e7d511d19d91515/mercury_480x320_new.jpg?disposition=inline) no-repeat center center/cover;
+    height:2000px;
+    width: 100%;
+    padding: 10px 0;
+    
+
+}
+.dist {
+    background-color: lightgray;
+
+    height: 200px;
+    width: 100%;
+    padding: 10px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+h4{
+    color: #333;
+}
+.numericdist {
+
+}
+
+.description {
+    
+    height: 100%;
+    width: 100%;
+    padding: 10px 8px;
+    font-size: 1.2rem;
+
+}
+.btn {
+    
+    height: 300px;
+    width: 100%;
+    text-align: center;
+    background: rgb(74, 187, 74);
+    font-size: 25px;
+    text-decoration: none;  
+    padding-top: 30px; 
+    border-radius: 0 0 10px 10px;
+
+}
+.btn:hover{
+    background: rgb(56, 141, 56);
+}
+.venus .pic {
+    background: url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBajl5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1771be6bd46710c30aa93cd6c3ababe23ad52681/480x320_venus.png?disposition=inline) no-repeat center center/cover;
+    height:2000px;
+    width: 100%;
+    padding: 10px 0;
+}
+.earth .pic {
+    background: url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0Z5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--95003f011b0d6a78fda6724a75d5fe39aa017fe8/earth_480x320.jpg?disposition=inline) no-repeat center center/cover;
+    height:2000px;
+    width: 100%;
+    padding: 10px 0;
+}
+.mars .pic {
+    background: url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa1J5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e0c43c740e3f68577d54939e8081f2311113f36e/mars_480x320.jpg?disposition=inline) no-repeat center center/cover;
+    height:2000px;
+    width: 100%;
+    padding: 10px 0;
+}
+.jupiter .pic {
+    background: url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa3B5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b54f499dbe9d4b73a0292a51f63fcda615496b9a/jupiter_480x320_new.jpg?disposition=inline) no-repeat center center/cover;
+    height:2000px;
+    width: 100%;
+    padding: 10px 0;
+}
+.saturn .pic {
+    background: url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbFJ5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--36cd7257e340442074c8173c1f894281d04a2678/saturn_480x320.jpg?disposition=inline) no-repeat center center/cover;
+    height:2000px;
+    width: 100%;
+    padding: 10px 0;
+}
+.uranus .pic {
+    background: url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbXB5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b7591d57707f65489874a87412390a9b34a9a74e/uranus_480x320.jpg?disposition=inline) no-repeat center center/cover;
+    height:2000px;
+    width: 100%;
+    padding: 10px 0;
+}
+.neptune .pic {
+    background: url(https://solarsystem.nasa.gov/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbkp5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cb7cb2868fd8b4892788893961c20975baffeb52/neptune_480x320.jpg?disposition=inline) no-repeat center center/cover;
+    height:2000px;
+    width: 100%;
+    padding: 10px 0;
+}
+
