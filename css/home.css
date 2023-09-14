@@ -1,0 +1,214 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    max-width: 500px;
+    max-height: 100vh;
+}
+body {
+    line-height: 1.4;
+}
+
+.Icontainer {
+    max-width: 500px;
+    margin:auto;
+    /* overflow: hidden; */
+    padding:0 3rem;  
+}
+.Icontainer img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top:0;
+    position: fixed;
+    width: 18rem;
+    height: 3rem;
+}
+
+#showcase {
+    color:#fff;
+    height: 100vh;
+    position: relative;
+    background: url('/Planets/planetshero.jpg') no-repeat center center/cover;
+}
+
+
+#showcase:before{
+    content: '';
+    position:absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#showcase .showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    min-height: 100vh;
+    padding-bottom: 7rem;
+
+}
+
+#showcase h1 {
+    font-size: 3rem;
+    font-family: 'Metropolis', sans-serif;                      
+    color:#FFF; 
+    margin-left:-19rem;  
+    font-weight: bold;
+}
+
+#showcase p {
+    font-size: 1.4rem;
+    font-family: 'Metropolis', sans-serif;
+    margin-left:0.8rem;                                             
+    color:#E3E3E3;
+    font-weight: 500;
+}
+
+.Icontainer {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1;
+    margin-left: 27rem;
+}
+
+.Icontainer .toggler {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity:0;
+
+}
+
+.Icontainer .planets {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    padding:1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Icontainer .planets > div {
+    position: relative;
+    flex:none;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    font-family: 'Metropolis', sans-serif;    
+}
+
+
+.Icontainer .planets > div::before,
+.Icontainer .planets > div::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top:-10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.Icontainer .planets > div:after{
+    top:10px;
+}
+
+
+.Icontainer .toggler:checked + .planets > div {
+    transform: rotate(135deg);
+}
+
+.Icontainer .toggler:checked + .planets > div:before, .Icontainer .toggler:checked + .planets >div:after{
+    top:0;
+    transform: rotate(90deg);
+} 
+
+.Icontainer .toggler:checked ~ .planets1 {
+    visibility: visible;
+}
+
+.Icontainer .toggler:checked ~ .planets1 > div {
+    transform: scale(1);
+    
+}
+.Icontainer .toggler:checked ~ .planets1 > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease 0.4;
+}
+
+.Icontainer .planets1 {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Icontainer .planets1 > div {
+    background: rgb(2, 2, 54);
+    width: 200vw;
+    height: 200vw;
+    flex:none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+    opacity: 0.9;
+}
+
+.Icontainer .planets1 > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vw;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.Icontainer .planets1 > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    font-family: 'Metropolis', sans-serif;    
+}
+
+.Icontainer .planets1 > div > div > ul > li > a {
+    color:#fff;
+    text-decoration: none;
+    background: rgb(2, 21, 49);
+    transition: color 0.4s ease;
+    font-family: 'Metropolis', sans-serif; 
+    font-size: 1.7rem;  
+
+}
+
+.Icontainer .planets1 > div > div > ul > li > a:hover {
+    color: #fff;
+}
+
